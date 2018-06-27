@@ -9,7 +9,7 @@ make         && \
 make install</pre><p>A few dependencies are required. The Ubuntu package names are:<br />
 git-core build-essential pkg-config libtool libevent-dev libncurses-dev zlib1g-dev automake libssh-dev libmsgpack-dev</p></div></div></div><div class="social-buttons"><div class="github"><iframe src="http://tmate.io/github-btn.html?user=tmate-io&repo=tmate&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe></div></div></div></div><hr /><div class="row"><div class="span12"><h2>Usage</h2><ul><li>Once installed, simply launch tmate with <code>tmate</code>.</li><li>Run <code>tmate show-messages</code> in your shell to see tmate's log
 messages, including the ssh connection string.</li><li>tmate also allow you to share a read-only view of your terminal.
-The read-only connection string can be retreived with <code>tmate show-messages</code>.</li><li>tmate uses both <code>~/.tmux.conf</code> and <code>~/.tmate.conf</code>
+The read-only connection string can be retrieved with <code>tmate show-messages</code>.</li><li>tmate uses both <code>~/.tmux.conf</code> and <code>~/.tmate.conf</code>
 configuration files.</li><li>Your mates will be using your tmux config and your key bindings.</li><li>The terminal is forced to 256 colors and UTF-8, so you don't need to pass
 <code>-2</code> as you may be used to do with tmux.</li></ul></div></div><hr /><div class="row"><div class="span12"><h2>Running tmate as a daemon</h2><p>You can run tmate detached, and retrieve the SSH connection strings as follow:</p><pre>tmate -S /tmp/tmate.sock new-session -d               # Launch tmate in a detached state
 tmate -S /tmp/tmate.sock wait tmate-ready             # Blocks until the SSH connection is established
